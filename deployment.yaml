@@ -18,7 +18,7 @@ spec:
         - name: livraison-front
           image: dali05/livraison-front-pipeline:1.0.0-24
           ports:
-            - containerPort: 4200
+            - containerPort: 443   # Port HTTPS
           resources:
             limits:
               cpu: 500m
