@@ -7,9 +7,7 @@ metadata:
 spec:
   selector:
     app: livraison-front
-
   ports:
-    - port: 8080
-      targetPort: 8080
-
+    - port: 4200       # Port exposé par le service
+      targetPort: 4200 # Port du conteneur (NGINX)
   type: LoadBalancer
