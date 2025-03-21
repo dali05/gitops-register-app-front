@@ -8,6 +8,6 @@ spec:
   selector:
     app: livraison-front
   ports:
-    - port: 4200       # Port exposé par le service
-      targetPort: 4200 # Port du conteneur (NGINX)
+    - port: 443       # Port HTTPS exposé par le service
+      targetPort: 443 # Port du conteneur (NGINX)
   type: LoadBalancer
