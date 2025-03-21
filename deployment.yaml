@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: livraison-front  # <<-- Corriger ici
+  name: livraison-front
   labels:
     app.kubernetes.io/instance: livraison-front
 spec:
@@ -18,7 +18,7 @@ spec:
         - name: livraison-front
           image: dali05/livraison-front-pipeline:1.0.0-11
           ports:
-            - containerPort: 8080
+            - containerPort: 80   # Changer ici pour le port NGINX
           resources:
             limits:
               cpu: 500m
