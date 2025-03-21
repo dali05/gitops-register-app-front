@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: livraison-front
-          image: dali05/livraison-front-pipeline:1.0.0-20
+          image: dali05/livraison-front-pipeline:1.0.0-21
           ports:
             - containerPort: 4200
           resources:
