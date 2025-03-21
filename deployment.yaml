@@ -1,7 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: livraison-front-pipeline
+  name: livraison-front  # <<-- Corriger ici
+  labels:
+    app.kubernetes.io/instance: livraison-front
 spec:
   replicas: 2
   selector:
@@ -15,9 +17,9 @@ spec:
       containers:
         - name: livraison-front
           image: dali05/livraison-front-pipeline:1.0.0-11
-          resources:
-            limits:
-              memory: "256Mi"
-              cpu: "500m"
           ports:
             - containerPort: 8080
+          resources:
+            limits:
+              cpu: 500m
+              memory: 256Mi
