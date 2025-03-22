@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: livraison-front
-          image: dali05/livraison-front-pipeline:1.0.0-27
+          image: dali05/livraison-front-pipeline:1.0.0-28
           ports:
             - containerPort: 443   # Port HTTPS
           resources:
